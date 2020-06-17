@@ -94,17 +94,32 @@ gs.best_score_
 gs.best_estimator_
 
 rf = RandomForestRegressor(n_estimators=100,criterion='mae')
+rf.fit(X_train,y_train)
 
 # test ensembles
 tpred_lm = lm.predict(X_test)
 tpred_lml = lm_l.predict(X_test)
-tpred_rf = gs.best_estimator_.predict(X_test)
+tpred_rf = rf.predict(X_test)
 tpred_xgb = xgb.predict(X_test)
 
 from sklearn.metrics import mean_absolute_error
 mean_absolute_error(y_test,tpred_lm) #out : 424856873.5866135
 mean_absolute_error(y_test,tpred_lml) #out : 0.5763085951975947
-mean_absolute_error(y_test,tpred_rf) #out : 0.3355283333333334
+mean_absolute_error(y_test,tpred_rf) #out : 0.32142499999999996
 mean_absolute_error(y_test,tpred_xgb) #out : 0.4728345754742622
 
 mean_absolute_error(y_test,(tpred_rf+tpred_xgb)/2) #out : 0.3987738179083665
+
+
+import pickle
+pickl = {'model': rf}
+pickle.dump(pickl, open('model_file' + ".p", "wb"))
+
+file_name = "model_file.p"
+with open(file_name, 'rb') as pickled:
+    data = pickle.load(pickled)
+    model = data['model']
+    
+model.predict(np.array(list(X_test.iloc[1,:])).reshape(1,-1))[0]
+
+list(X_test.iloc[1,:])
