@@ -26,7 +26,7 @@ The predicted number is a float, we will then have an idea of the degree level.
 **For Web Framework Requierements:** `pip install -r requirements.txt`\
 [**Scraper Github**](https://github.com/arapfaik/scraping-glassdoor-selenium)\
 [**Scraper Article**](https://towardsdatascience.com/selenium-tutorial-scraping-glassdoor-com-in-10-minutes-3d0915c6d905)\
-[**Ken Jee**](https://www.youtube.com/channel/UCiT9RITQ9PW6BhXK0y2jaeg)
+[**Ken Jee**](https://www.youtube.com/channel/UCiT9RITQ9PW6BhXK0y2jaeg)\
 [**Flask Productionization**](https://towardsdatascience.com/productionize-a-machine-learning-model-with-flask-and-heroku-8201260503d2)(code and use)
 
 ## Web Scraping
