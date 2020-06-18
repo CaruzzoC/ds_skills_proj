@@ -8,11 +8,11 @@
 
 ## Code and Resources Used
 
-**Python Version:** 3.7\n
-**Packages:** pandas, numpy, sklearn, xgboost, matplotlib, seaborn, selenium, flask, json, pickle
-**For Web Framework Requierements:** `pip install -r requirements.txt`
-[**Scraper Github**](https://github.com/arapfaik/scraping-glassdoor-selenium)
-[**Scraper Article**](https://towardsdatascience.com/selenium-tutorial-scraping-glassdoor-com-in-10-minutes-3d0915c6d905)
+**Python Version:** 3.7\
+**Packages:** pandas, numpy, sklearn, xgboost, matplotlib, seaborn, selenium, flask, json, pickle\
+**For Web Framework Requierements:** `pip install -r requirements.txt`\
+[**Scraper Github**](https://github.com/arapfaik/scraping-glassdoor-selenium)\
+[**Scraper Article**](https://towardsdatascience.com/selenium-tutorial-scraping-glassdoor-com-in-10-minutes-3d0915c6d905)\
 [**Flask Productionization**](https://towardsdatascience.com/productionize-a-machine-learning-model-with-flask-and-heroku-8201260503d2)(code and use)
 
 ## Web Scraping
@@ -59,7 +59,7 @@ I analysed the data distribution and the impact they could have as a feature for
 
 ![Correlation Heatmap](https://github.com/CaruzzoC/ds_skills_proj/blob/master/img/correlation_heatmap.PNG)
 ![top 20 State](https://github.com/CaruzzoC/ds_skills_proj/blob/master/img/top20_state.PNG)
-[pivot table Job/Skills](https://github.com/CaruzzoC/ds_skills_proj/blob/master/img/pivot_table_job_skills.PNG)
+![pivot table Job/Skills](https://github.com/CaruzzoC/ds_skills_proj/blob/master/img/pivot_table_job_skills.PNG)
 
 The correlation table made me realise that the description_len column shouldn't be used as a feature to prevent target leakage.
 
