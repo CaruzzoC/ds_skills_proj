@@ -8,7 +8,7 @@ The goal is to get a number between 0 and 3 :
 * **0:** No degrees expectation / years of experiences requiered.
 * **1:** Bachelor degree at least.
 * **2:** Master degree at least.
-* **3:** PhD degree at least.
+* **3:** PhD degree at least.\
 The predicted number is a float, we will then have an idea of the degree level.
 
 ## Summary
