@@ -1,5 +1,14 @@
 # Data Science Degree Level Requirement Estimator : Project Overview
 
+I m a student myself at this time, so i know this issue quite well. We can have a job goal, a company goal, a location we prefer. Therefore we can wonder what Degree level will the company expect from us for a given mission.
+
+The goal is to get a number between 0 and 3 :
+* **0:** No degrees expectation / years of experiences requiered.
+* **1:** Bachelor degree at least.
+* **2:** Master degree at least.
+* **3:** PhD degree at least.
+The predicted number is a float, we will then have an idea of the degree level.
+
 * Created a tool that estimates Data Science (and some related jobs) degree level required (BER ~10%) to help students realizing what skills level they need for their goal job.
 * Scraped 1000 job description from glassdoor using python and selenium.
 * Engineered features from the text of each job description to quantify the value companies put on python, aws, spark and educational degrees.
