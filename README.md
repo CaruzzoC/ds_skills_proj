@@ -2,10 +2,10 @@
 
 ## Presentation
 
-I m a student myself at this time, so i know this issue quite well. We can have a job goal, a company goal, a location we prefer. Therefore we can wonder what Degree level will the company expect from us for a given mission.
+I m a student myself at this time, so I know this issue quite well. We can have a job goal, a company goal, a location we prefer. Therefore, we can wonder what Degree level will the company expect from us for a given mission.
 
 The goal is to get a number between 0 and 3 :
-* **0:** No degrees expectation / years of experiences requiered.
+* **0:** No degrees expectation / years of experiences required.
 * **1:** Bachelor degree at least.
 * **2:** Master degree at least.
 * **3:** PhD degree at least.\
@@ -13,10 +13,10 @@ The predicted number is a float, we will then have an idea of the degree level.
 
 ## Summary
 
-* Created a tool that estimates Data Science (and some related jobs) degree level required (BER ~10%) to help students realizing what skills level they need for their goal job.
+* Created a tool that estimates Data Science (and some related jobs) degree level required (ER ~10%) to help students realizing what skills level they need for their goal job.
 * Scraped 1000 job description from glassdoor using python and selenium.
 * Engineered features from the text of each job description to quantify the value companies put on python, aws, spark and educational degrees.
-* Optimized Linear, Lasso, Random Forest Regressors and Extreme Gradient Boosting Regressor using GridsearchCV to reach the best paramters for a non underfitting/overfitting model.
+* Optimized Linear, Lasso, Random Forest Regressors and Extreme Gradient Boosting Regressor using GridsearchCV to reach the best parameters for a non underfitting/overfitting model.
 * Built a client facing API using flask
 
 ## Code and Resources Used
@@ -26,13 +26,14 @@ The predicted number is a float, we will then have an idea of the degree level.
 **For Web Framework Requierements:** `pip install -r requirements.txt`\
 [**Scraper Github**](https://github.com/arapfaik/scraping-glassdoor-selenium)\
 [**Scraper Article**](https://towardsdatascience.com/selenium-tutorial-scraping-glassdoor-com-in-10-minutes-3d0915c6d905)\
+[**Ken Jee**](https://www.youtube.com/channel/UCiT9RITQ9PW6BhXK0y2jaeg)
 [**Flask Productionization**](https://towardsdatascience.com/productionize-a-machine-learning-model-with-flask-and-heroku-8201260503d2)(code and use)
 
 ## Web Scraping
 
 Used the glassdoor scraper github repo (as linked above)(made a few change) to scrape 1000 job postings from glassdoor.com. With each job, I got the following:
 
-* Jobe title
+* Job title
 * Salary Estimate
 * Job Description
 * Rating
@@ -53,8 +54,8 @@ The scraped data needed to be cleaned for use. I made the following changes and 
 * Made columns for minimum salary, maximum salary, average salary and hourly wages.
 * Checked that every salary are provided
 * Parsed the rating out of company text
-* Made a column for the state and only kept the abreviation
-* Made a conditional column to know wether a job state is within the headquarter state
+* Made a column for the state and only kept the abbreviation
+* Made a conditional column to know if a job state is within the headquarter state
 * Transformed founded date into age of company
 * Engineered the job Description column to get specifics values :
   * Python
@@ -87,7 +88,7 @@ I tried these models:
 * **Multiple Linear Regression** - Baseline for the model
 * **Lasso Regression** - Because of the sparse data from the one hot encoding.
 * **Random Forest** - Due to the One hot encoding, i thought that the Random forest would be a good model.
-* **Extreme Gradient Boosting Regressor** - Beacause i thought it would get a smaller MAE with time.
+* **Extreme Gradient Boosting Regressor** - Because i thought it would get a smaller MAE with time.
 
 ## Model performance
 
